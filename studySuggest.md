@@ -8,11 +8,15 @@
     你的这个 vector 应该能放入 int 和 std::string 等元素类型
 
 4. 写一个表达式计算器，实现一个节点类的继承，体会面向对象编程
+
     ![calculate](./picture/calcute.png)
+
     表达式计算器能把四则运算式`3+2*4`解析成上图左的表达式树，对根节点调用`calculate()`虚函数就能计算出表达式的值。
     做完之后还可以在扩充功能，比如支持**三角函数**和**变量**。
     在写完面向对象版的表达式树之后，还可以略微尝试泛型编程。比如把类的继承体系化为下图：
+
     ![simplify](./picture/simplify.png)
+
     然后用`BinaryNode<std::plus<double>>`和`BinaryNode<std::multiplies<double>>`来具现化`BinaryNode<T>`类模板，通过控制模板参数的类型来实现不同的运算。
     在表达式树这个例子中，节点对象是**动态创建**的，值得思考：如何才能安全地、不重不漏地释放内存。
 
