@@ -1,3 +1,7 @@
+/**
+ * 实现一个线程安全的计数器
+ * 对于 MutexLock 和 MutexLockGuard 稍后再说
+ * */
 #include <iostream>
 #include <boost/noncopyable.hpp>
 
